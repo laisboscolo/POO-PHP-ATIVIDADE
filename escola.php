@@ -1,3 +1,25 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <!-- Bootstrap CSS -->
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet">
+    
+    <!-- Bootstrap ícones -->
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.3/font/bootstrap-icons.css">
+
+
+    <title>escola</title>
+</head>
+<body>
+    <header class="bg-primary text-white text-center py-3">
+        <h1>Escola raimundo</h1>
+    </header>
+
+    <main><div id="respostas" class="container ms-2 d-flex flex-column">
+    </div></main>
+
 <?php
 
 class Aluno{
@@ -16,10 +38,28 @@ class Aluno{
     }
 }
 
-$dani = new Aluno("Dani", "Historia" , 9);
+class Aluno extends Pessoa{
 
-echo $dani->nome;
-echo $dani->verNota();
+    public function apresentar()
+    {
+        echo "Oii! Meu nome é {$this->nome} e sou aluno da rede e minha matéria favorita é {$this->materia}";
+    }
+}
+
+class Professor extends Pessoa{
+    public function apresentar()
+    {
+        echo "Oi! Eu sou o Professor {$this->nome} e dou aula de {$this->materia}";
+    }
+}
+
+// objetos
+$daniluski = new Aluno("Daniluski", 17);
+$isa = new Professor("isa", 17);
+
+echo $daniluski->apresentar();
+echo $isa->apresentar();
+?>
 
 class Pessoa {
     public $nome;
@@ -58,5 +98,9 @@ $thalita->estudar();
 $rayanne->ensinar();
 $rayanne->apresentar();
 
+$dani = new Aluno("Dani", "Historia" , 9);
+
+echo $dani->nome;
+echo $dani->verNota();
 ?>
 
