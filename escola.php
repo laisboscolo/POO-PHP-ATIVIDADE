@@ -53,6 +53,12 @@ class Professor extends Pessoa{
     }
 }
 
+class Diretor extends Pessoa{
+    public function apresentar()
+    {
+        echo "Oi! Sou o diretor {$this->nome}.";
+    }
+}
 // objetos
 $daniluski = new Aluno("Daniluski", 17);
 $isa = new Professor("isa", 17);
