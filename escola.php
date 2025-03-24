@@ -59,13 +59,13 @@ class Diretor extends Pessoa{
         echo "Oi! Sou o diretor {$this->nome}.";
     }
 }
-// objetos
-$daniluski = new Aluno("Daniluski", 17);
-$isa = new Professor("isa", 17);
 
-echo $daniluski->apresentar();
-echo $isa->apresentar();
-?>
+class Funcionario extends Pessoa{
+    public function apresentar()
+    {
+        echo "Oi! Sou funcionario da rede e meu nome é {$this->nome}.";
+    }
+}
 
 class Pessoa {
     public $nome;
