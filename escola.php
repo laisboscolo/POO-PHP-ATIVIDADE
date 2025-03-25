@@ -13,7 +13,7 @@
     <title>escola</title>
 </head>
 <body>
-    <header class="bg-primary text-white text-center py-3">
+    <header class="bg-danger text-white text-center py-3">
         <h1>Escola raimundo</h1>
     </header>
 
