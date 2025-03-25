@@ -22,7 +22,7 @@
 
 <?php
 
-class Aluno{
+class Pessoa{
     public $nome;
     public $materia;
     private $nota;
@@ -42,71 +42,46 @@ class Aluno extends Pessoa{
 
     public function apresentar()
     {
-        echo "Oii! Meu nome é {$this->nome} e sou aluno da rede e minha matéria favorita é {$this->materia}";
+        echo "Oii! Meu nome é {$this->nome} e sou aluno da rede e minha matéria favorita é {$this->materia}.<br>";
     }
 }
 
 class Professor extends Pessoa{
     public function apresentar()
     {
-        echo "Oi! Eu sou o Professor {$this->nome} e dou aula de {$this->materia}";
+        echo "Oi! Eu sou o Professor {$this->nome} e dou aula de {$this->materia}.<br>";
     }
 }
 
 class Diretor extends Pessoa{
     public function apresentar()
     {
-        echo "Oi! Sou o diretor {$this->nome}.";
+        echo "Oi! Sou o diretor {$this->nome}.<br>";
     }
 }
 
 class Funcionario extends Pessoa{
     public function apresentar()
     {
-        echo "Oi! Sou funcionario da rede e meu nome é {$this->nome}.";
-    }
-}
-
-class Pessoa {
-    public $nome;
-    public $idade;
-
-    public function __construct($nome, $idade)
-    {
-        $this->nome = $nome;
-        $this->idade = $idade;
-    }
-
-    public function apresentar(){
-        echo "Olá sou {this->nome} e tenho {this->idade}";
-    }
-
-}
-
-class Aluno extends Pessoa{
-    public function estudar(){
-        echo "{this->nome} está estudando";
-    }
-}
-
-class Professor extends Pessoa{
-    public function ensinar(){
-        echo "Professor {this->nome} está ensinando";
+        echo "Oi! Sou funcionario da rede e meu nome é {$this->nome} e sou {$this->materia}.<br>";
     }
 }
 
 // criando objetos
-$thalita = new Aluno ("Thalita", 16);
-$rayanne = new Professor ("Rayanne", 54);
 
-$thalita->apresentar();
-$thalita->estudar();
-$rayanne->ensinar();
-$rayanne->apresentar();
 
 $dani = new Aluno("Dani", "Historia" , 9);
+$thalita = new Aluno ("Thalita","Artes", 10);
+$rayanne = new Professor ("Rayanne", "Biologia", 54);
+$thiago = new Aluno ("Thiago", "Ingles", 17);
+$luzia = new Funcionario ("Luzia", "inspetora", 60);
 
-echo $dani->nome;
-echo $dani->verNota();
+
+echo $dani -> apresentar();
+echo $thalita -> apresentar();
+echo $thiago -> apresentar();
+echo $rayanne -> apresentar();
+echo $luzia -> apresentar();
+
 ?>
 
